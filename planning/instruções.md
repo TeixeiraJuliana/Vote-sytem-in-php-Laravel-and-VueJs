@@ -34,3 +34,12 @@ Utilizar Flexbox. (CSS)
 ENTREGA
 Após o recebimento do teste, o candidato tem até 72 horas para o envio dos arquivos que podem ser feitos pelo github.
 O email deverá ser encaminhado para davi@signoweb.com.br , com o assunto: TESTE FULLSTACK - 001/2022
+
+
+
+
+composer install --no-script
+php artisan key:generate
+cp .env.example .env
+php artisan key:generate
+npm i 
