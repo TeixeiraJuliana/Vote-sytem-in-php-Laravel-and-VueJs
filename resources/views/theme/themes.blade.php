@@ -32,8 +32,9 @@
             <div>{{$tema->created_at}}</div>
             <div>{{$tema->created_at}}</div>
             <div id="m-icons-up-del">
-                <a href="{{url('/temas/excluir')}}"><img src="./assets/img/trash.png" alt=""></a>
-                <a href="{{url('/temas/excluir')}}"><img src="./assets/img/pesquisar-arquivo.png" alt=""></a>
+                <a href="temas/{{ $tema->id }}/editar">Editar</a>
+                <a href="/temas/excluir"><img src="./assets/img/trash.png" alt=""></a>
+                <a href="/temas/excluir'"><img src="./assets/img/pesquisar-arquivo.png" alt=""></a>
             </div>
         </div>
     </div>
