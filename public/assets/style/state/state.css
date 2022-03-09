@@ -1,0 +1,3 @@
+#m-container-general-user input:focus{
+    border: 3px solid var(--color-bolhas-medias);
+}

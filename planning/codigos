@@ -1,0 +1,13 @@
+Route::group(['middleware' => 'web'], function () {
+    Route::get('/', '' );
+
+});
+
+
+@if ( Request::is(*/edit))
+
+
+
+
+
+

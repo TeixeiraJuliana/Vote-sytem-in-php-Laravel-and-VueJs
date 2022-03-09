@@ -1,0 +1,60 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: grey;
+}
+
+.m-flex-ctr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header{
+    width: 100%;
+    height: 120px;
+    background-color: azure;
+}
+.m-container-general{
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+#m-container-general-user{
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 400px;
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 20px;
+}
+.m-form{
+    background-color: blue;
+
+}
+label{
+    margin: 20px 0px 10px 0px;
+}
+input, button{
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+}
+
+#remember_me{
+    width: 20px;
+}
+.m-rodape-card{
+    width: 100%;
+    display: flex;
+    flex-direction:row; 
+    background-color: blue;
+}
+
+@media only screen and (max-width: 500px) {
+    #m-container-general-user{
+        min-height: 100%;
+    }
+}
+

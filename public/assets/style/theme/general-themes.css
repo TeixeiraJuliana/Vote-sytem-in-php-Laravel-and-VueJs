@@ -1,0 +1,37 @@
+:root {
+    --color-background:#ffffff;
+    --color-red:#da1a2c;
+    --color-cinza-fonte:#757983;
+    --color-detalhe-logo:#971720;
+    --color-bolhas-medias: #d6d9e3;
+    --color-bolhas-claras:#ecedef;
+    --color-bolhas-escuras:#2B3D50;
+  }
+
+  .t-back-rs{
+      background-color: var(--color-cinza-fonte);
+
+  }
+
+.font-light-grey{
+    color: var(--color-bolhas-medias);
+}
+
+label{
+    color: var(--color-bolhas-medias);
+}
+input{
+    border: 1px solid var(--color-bolhas-medias);
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
