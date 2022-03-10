@@ -171,12 +171,13 @@ body{
     align-items: center;
 }
 #m-theme-table-row {
-    height: 60px;
+    text-align: start;
     justify-content: center;
     align-items: flex-end;
     width: 100%;
-
-
+}
+#m-row-title{
+ 
 
 }
 #m-icons-up-del{

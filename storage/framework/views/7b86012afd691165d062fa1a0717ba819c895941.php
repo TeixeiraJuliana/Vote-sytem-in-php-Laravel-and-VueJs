@@ -15,7 +15,7 @@
     <?php $__currentLoopData = $themes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tema): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <div  id="m-theme-table-rows">
         <div  id="m-theme-table-row">
-            <div><?php echo e($tema->title); ?></div>
+            <div id="m-row-title"><?php echo e($tema->title); ?></div>
             <div><?php echo e($tema->description); ?></div>
             <div><?php echo e($tema->created_at); ?></div>
             <div><?php echo e($tema->created_at); ?></div>

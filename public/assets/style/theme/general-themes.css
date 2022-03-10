@@ -13,6 +13,9 @@
 .font-light-grey{
     color: var(--color-bolhas-medias);
 }
+h1{
+    color: var(--color-detalhe-logo);
+}
 label{
     color: var(--color-bolhas-medias);
 }
@@ -37,6 +40,7 @@ input{
     background-color: var(--color-bolhas-medias);
     border: 1px solid var(--color-cinza-fonte);
 }
+
 
 
 

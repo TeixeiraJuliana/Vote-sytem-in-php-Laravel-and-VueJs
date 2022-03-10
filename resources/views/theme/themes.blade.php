@@ -17,7 +17,7 @@
     @foreach ($themes  as $tema)
     <div  id="m-theme-table-rows">
         <div  id="m-theme-table-row">
-            <div>{{$tema->title}}</div>
+            <div id="m-row-title">{{$tema->title}}</div>
             <div>{{$tema->description}}</div>
             <div>{{$tema->created_at}}</div>
             <div>{{$tema->created_at}}</div>
