@@ -15,18 +15,29 @@ class ThemeController extends Controller
         return view('theme.formTheme');
     }
     public function add(Request $request){
-        $addTheme = new Theme;
-        $addTheme = $addTheme->create($request->all());
+        $theme = new Theme;
+        $theme =$theme->create($request->all());
         return Redirect::to('/temas');
     }
     public function edit($id){
-        $addTheme = Theme::findOrFail($id);
-        return view('theme.formTheme', ['addTheme' =>  $addTheme]);
+        $theme = Theme::findOrFail($id);
+        return view('theme.formTheme', ['addTheme' =>  $theme]);
     }
+
+    public function destruir($id ){
+        Theme::findOrFail($id)->delete(); 
+    }
+
 
 }
 
 /*
+    public function destruir( $id ){
+        $theme = Theme::findOrFail($id);
+        var_dump($theme); exit;
+        $theme->delete();
+        return Redirect::to('/temas');
+    }
 
 
     public function update($id, Request $request){

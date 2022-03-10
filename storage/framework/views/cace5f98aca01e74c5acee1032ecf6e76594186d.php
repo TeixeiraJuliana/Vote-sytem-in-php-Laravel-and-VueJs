@@ -1,8 +1,8 @@
 
     <h1>Formulário</h1>
-    @if ( Request::is('*/edit'))
-    <form action="{{ url('/temas/add') }}" method="POST">
-        @csrf
+    <?php if( Request::is('*/edit')): ?>
+    <form action="<?php echo e(url('/temas/add')); ?>" method="POST">
+        <?php echo csrf_field(); ?>
         <div>
             <label for="id">id tema</label>
             <input type="number" name="id"  >
@@ -23,11 +23,11 @@
     </form>
 
 
-@else
+<?php else: ?>
 
 
-    <form action="{{ url('/temas/criarTema') }}" method="POST">
-        @csrf
+    <form action="<?php echo e(url('/temas/criarTema')); ?>" method="POST">
+        <?php echo csrf_field(); ?>
         <div>
             <label for="id">id tema</label>
             <input type="number" name="id">
@@ -46,5 +46,6 @@
         </div>
         <button type="submit">Cadastrar</button>
     </form>
-    @endif
+    <?php endif; ?>
 
+<?php /**PATH C:\Users\julia\Documents\GitHub\PHP projects\Testes\Vote-sytem-in-php-Laravel-and-VueJs\resources\views/theme/formTheme.blade.php ENDPATH**/ ?>

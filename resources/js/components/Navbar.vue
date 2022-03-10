@@ -1,6 +1,6 @@
 <template>
-    <div class="container">
-        Olaaaaa Mundo
+    <div>
+        Navbar
     </div>
 </template>
 

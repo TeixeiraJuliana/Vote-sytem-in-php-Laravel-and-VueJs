@@ -1,6 +1,6 @@
 <template>
-    <div class="container">
-        Footer
+    <div>
+        Topics
     </div>
 </template>
 
@@ -11,3 +11,4 @@
         }
     }
 </script>
+

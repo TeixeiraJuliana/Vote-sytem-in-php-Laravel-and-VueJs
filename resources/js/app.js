@@ -21,6 +21,7 @@
 
  Vue.component('App', require('./components/App.vue').default);
  Vue.component('Navbar', require('./components/Navbar').default);
+ Vue.component('Topics', require('./components/Topics').default);
 
  /**
   * Next, we will create a fresh Vue application instance and attach it to
@@ -30,4 +31,9 @@
 
  const app = new Vue({
      el: '#app',
+     components:{
+        App,
+        Navbar, 
+        Topics
+     }
  });

@@ -1,18 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-
-<div class="card-header">{{ __('Dashboard') }}</div>
-
-<div class="card-body">
+<div class="container">
     <App></App>
-    @if (session('status'))
-        <div class="alert alert-success" role="alert">
-            {{ session('status') }}
+<div>
+    <div class="m-dash-cont  m-flx-g">
+        <div id="m-home-left">
+        <h1>Pesquisas mais acessadas</h1>
         </div>
-    @endif
-    <h1>Seja Bem vindo</h1>
-    <a href="{{ url('temas')}}">Temas de votações</a>
+        <div class="m-home-right m-flx-g" >
+            <div id="m-home-rec">
+                <div class="card-header">{{ __('Dashboard') }}</div>
+            </div>
+            <div id="m-home-op" >
+                <h1>Seja Bem vindo</h1>
+                <a href="{{ url('temas')}}">Temas de votações</a>
+            </div>
+        </div>
+    </div>
 </div>
-
+    <Footer></Footer>
+</div>
 @endsection

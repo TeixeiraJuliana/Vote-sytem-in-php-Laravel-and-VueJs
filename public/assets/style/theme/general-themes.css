@@ -7,16 +7,12 @@
     --color-bolhas-claras:#ecedef;
     --color-bolhas-escuras:#2B3D50;
   }
-
   .t-back-rs{
       background-color: var(--color-cinza-fonte);
-
   }
-
 .font-light-grey{
     color: var(--color-bolhas-medias);
 }
-
 label{
     color: var(--color-bolhas-medias);
 }
@@ -24,8 +20,23 @@ input{
     border: 1px solid var(--color-bolhas-medias);
     outline: none;
 }
-
-
+.container-navbar{
+    background-color: var(--color-cinza-fonte);
+    color: var(--color-background);
+}
+.container-navbar div li {
+    color: var(--color-background);
+}
+#m-log-em-pas label{
+    color: var(--color-bolhas-escuras);
+}
+#m-log-em-pas input{
+    border: 1px solid var(--color-bolhas-escuras);
+}
+.m-footer-card button{
+    background-color: var(--color-bolhas-medias);
+    border: 1px solid var(--color-cinza-fonte);
+}
 
 
 
