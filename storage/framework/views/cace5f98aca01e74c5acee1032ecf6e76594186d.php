@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>
     <h1>Formulário</h1>
-    <?php if( Request::is('*/edit')): ?>
-    <form action="<?php echo e(url('/temas/add')); ?>" method="POST">
+    <?php if( Request::is('*/editar')): ?>
+    <form action="/temas/aditado/<?php echo e($theme->id); ?>" method="post">
         <?php echo csrf_field(); ?>
         <div>
             <label for="id">id tema</label>
@@ -9,15 +9,15 @@
         </div>
         <div>
             <label for="id-theme">id user</label>
-            <input type="number" name="user-id" value="$->user-id">
+            <input type="number" name="user-id" value="$theme->user-id">
         </div>
         <div>
             <label for="title">Título</label>
-            <input type="text" name="title" value="$addTheme->title">
+            <input type="text" name="title" value="$theme->title">
         </div>
         <div>
             <label for="title">Título</label>
-            <input type="text" name="description" value="$addTheme->description">
+            <input type="text" name="description" value="$theme->description">
         </div>
         <button type="submit">Cadastrar</button>
     </form>

@@ -21,7 +21,6 @@
             <div><?php echo e($tema->created_at); ?></div>
             <div id="m-icons-up-del">
                 <a href="">Editar</a>
-                <div></div>
                 <div>
                     <form action="temas/<?php echo e($tema->id); ?>" method="post">
                         <?php echo csrf_field(); ?>

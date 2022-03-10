@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <App></App>
+
 <div>
     <div class="m-dash-cont  m-flx-g">
         <div id="m-home-left">

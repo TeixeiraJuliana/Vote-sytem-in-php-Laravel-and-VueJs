@@ -23,7 +23,6 @@
             <div>{{$tema->created_at}}</div>
             <div id="m-icons-up-del">
                 <a href="">Editar</a>
-                <div></div>
                 <div>
                     <form action="temas/{{ $tema->id}}" method="post">
                         @csrf
