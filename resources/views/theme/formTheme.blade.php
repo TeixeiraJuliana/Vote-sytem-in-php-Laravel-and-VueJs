@@ -1,12 +1,9 @@
 @extends('layouts.app')
 
-
-
-
-   <div class="container m-flx-g">
-       <div  id="m-cont-form-theme" >
-        <div class="teste" >
-           <h1>Formulário</h1>
+@section('content')
+<div class="container m-flx-g ">
+       <div class="m-cont-form-theme m-flx-g" >
+            <h1>Cadastre sua pesquisa</h1>
             @if ( Request::is('*/editar'))
             <form action="/temas/aditado/{{$theme->id}}" method="post">
                 @csrf
@@ -44,14 +41,16 @@
                     <input type="text" name="title">
                 </div>
                 <div>
-                    <label for="title">Título</label>
-                    <input type="text" name="description">
+                    <label for="title">Descrição</label>
+                    <input id="m-inp-desc" type="text" name="description">
                 </div>
-                <button type="submit">Cadastrar</button>
+                <div>
+                    <label for="title">Opções</label>
+                    <input type="text" name="">
+                </div>
+                <button id="m-btn-form" type="submit">Cadastrar</button>
             </form>
             @endif
-           </div>
        </div>
    </div>
-
-
+@endsection

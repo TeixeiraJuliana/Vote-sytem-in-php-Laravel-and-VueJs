@@ -98,4 +98,4 @@
     <script src="<?php echo e(mix('js/app.js')); ?>"></script>
 </body>
 </html>
-<?php /**PATH /home/usuario/Documentos/Vote-sytem-in-php-Laravel-and-VueJs/resources/views/layouts/app.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\Users\julia\Documents\GitHub\PHP projects\Nova pasta\Vote-sytem-in-php-Laravel-and-VueJs\resources\views/layouts/app.blade.php ENDPATH**/ ?>
