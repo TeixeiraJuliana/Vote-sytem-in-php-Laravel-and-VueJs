@@ -18,3 +18,5 @@ https://www.youtube.com/watch?v=xFi5lC4QRZQ - mathues batisti
 
 
 https://www.youtube.com/watch?v=NtM9B12lARw vue js em php 
+
+https://www.youtube.com/watch?v=-3gt4zqV11k&list=PLnDvRpP8BnewYKI1n2chQrrR4EYiJKbUG&index=27 - mateus b aula update 
