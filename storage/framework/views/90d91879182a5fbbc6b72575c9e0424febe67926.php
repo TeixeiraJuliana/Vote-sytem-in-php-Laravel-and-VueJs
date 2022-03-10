@@ -1,12 +1,13 @@
-@extends('layouts.app')
 
-@section('content')
-<div class="container m-flx-g ">
-       <div class="m-cont-form-theme m-flx-g" >
-            <h1>Cadastre sua pesquisa</h1>
-            @if ( Request::is('*/editar'))
-            <form action="/temas/aditado/{{$theme->id}}" method="post">
-                @csrf
+
+
+   <div class="container">
+       <div id="m-cont-form-theme" >
+            <h1>Formulário</h1>
+            <Navbar/>
+            <?php if( Request::is('*/editar')): ?>
+            <form action="/temas/aditado/<?php echo e($theme->id); ?>" method="post">
+                <?php echo csrf_field(); ?>
                 <div>
                     <label for="id">id tema</label>
                     <input type="number" name="id"  >
@@ -25,9 +26,9 @@
                 </div>
                 <button type="submit">Cadastrar</button>
             </form>
-        @else
-            <form action="{{ url('/temas/criarTema') }}" method="POST">
-                @csrf
+        <?php else: ?>
+            <form action="<?php echo e(url('/temas/criarTema')); ?>" method="POST">
+                <?php echo csrf_field(); ?>
                 <div>
                     <label for="id">id tema</label>
                     <input type="number" name="id">
@@ -41,16 +42,14 @@
                     <input type="text" name="title">
                 </div>
                 <div>
-                    <label for="title">Descrição</label>
-                    <input id="m-inp-desc" type="text" name="description">
+                    <label for="title">Título</label>
+                    <input type="text" name="description">
                 </div>
-                <div>
-                    <label for="title">Opções</label>
-                    <input type="text" name="">
-                </div>
-                <button id="m-btn-form" type="submit">Cadastrar</button>
+                <button type="submit">Cadastrar</button>
             </form>
-            @endif
+            <?php endif; ?>
        </div>
    </div>
-@endsection
+
+
+<?php /**PATH /home/usuario/Documentos/Vote-sytem-in-php-Laravel-and-VueJs/resources/views/theme/formTheme.blade.php ENDPATH**/ ?>

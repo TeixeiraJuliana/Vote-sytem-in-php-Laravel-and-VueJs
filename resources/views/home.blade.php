@@ -15,6 +15,7 @@
             <div id="m-home-op" >
                 <h1>Seja Bem vindo</h1>
                 <a href="{{ url('temas')}}">Temas de votações</a>
+                <a href="{{ url('/temas/novoTema')}}">Criar Tema</a>
             </div>
         </div>
     </div>

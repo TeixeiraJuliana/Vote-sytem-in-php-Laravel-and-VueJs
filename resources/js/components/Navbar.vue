@@ -1,13 +1,14 @@
 <template>
     <div>
-        Navbar
+       <h1>{{msg}}</h1>
+       <h1>oiiiiiiiiiiiiiii</h1>
     </div>
 </template>
 
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+            msg:"Olooooo Navbar"
         }
     }
 </script>

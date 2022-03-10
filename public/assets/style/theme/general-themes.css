@@ -41,6 +41,10 @@ input{
     border: 1px solid var(--color-cinza-fonte);
 }
 
+.m-cont-form-theme button{
+    background: var(--color-bolhas-escuras);
+    color: var(--color-bolhas-medias);
+}
 
 
 
