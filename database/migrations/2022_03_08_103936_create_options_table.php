@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('options', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('theme-id')->unsigned();
-            $table->foreign('theme-id')->references('id')->on('themes');
+            $table->increments('theme_id')->unsigned();
+            $table->foreignId('theme_id')->constrained('themes');
             $table->string('option');
             $table->integer('how-many')->default(0);
             $table->softDeletes();

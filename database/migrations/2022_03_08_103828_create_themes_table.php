@@ -4,6 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+
+
 return new class extends Migration
 {
     /**
@@ -15,8 +17,8 @@ return new class extends Migration
     {
         Schema::create('themes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user-id')->unsigned();
-            $table->foreign('user-id')->references('id')->on('users');
+            $table->integer('user_id')->unsigned();
+            $table->foreignId('user_id')->constrained('users');
             $table->string('title');
             $table->text('description');
             $table->softDeletes();

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Theme;
+use App\Models\Options;
+use Auth;
 use Redirect;
 use Illuminate\Http\Request;
 
@@ -17,8 +19,19 @@ class ThemeController extends Controller
     public function add(Request $request){
         $theme = new Theme;
         $theme =$theme->create($request->all());
+
+        $theme-> user-id = Auth::
+        $opcoes = explode($request->input('opcoes'));
+        foreach($opcoes as $key => $value){
+            $opcao = new Options;
+            $opcao->theme_id = $theme->id;
+            $opcao->$opcao = $value;
+            $opcao->save();
+        }
         return Redirect::to('/temas');
     }
+
+
     public function edit($id){
         $theme = Theme::findOrFail($id);
         return view('theme.formTheme', ['theme' => $theme]);

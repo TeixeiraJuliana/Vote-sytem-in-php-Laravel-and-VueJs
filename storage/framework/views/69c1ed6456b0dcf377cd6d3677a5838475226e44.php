@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </nav>
-            <main class="py-4">
+            <main class="container">
                 <?php echo $__env->yieldContent('content' ); ?>
             </main>
         </div>
