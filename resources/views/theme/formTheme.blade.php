@@ -1,4 +1,6 @@
+@extends('layouts.app')
 
+@section('content')
     <h1>Formulário</h1>
     @if ( Request::is('*/edit'))
     <form action="{{ url('/temas/add') }}" method="POST">
@@ -9,7 +11,7 @@
         </div>
         <div>
             <label for="id-theme">id user</label>
-            <input type="number" name="user-id" value="$addTheme->user-id">
+            <input type="number" name="user-id" value="$->user-id">
         </div>
         <div>
             <label for="title">Título</label>
@@ -21,11 +23,7 @@
         </div>
         <button type="submit">Cadastrar</button>
     </form>
-
-
 @else
-
-
     <form action="{{ url('/temas/criarTema') }}" method="POST">
         @csrf
         <div>
@@ -47,4 +45,5 @@
         <button type="submit">Cadastrar</button>
     </form>
     @endif
+@endsection
 

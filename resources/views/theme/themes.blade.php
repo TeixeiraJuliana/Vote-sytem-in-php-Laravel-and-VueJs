@@ -25,10 +25,10 @@
                 <a href="">Editar</a>
                 <div></div>
                 <div>
-                    <form action="temas/{{ $tema->id }}" method="post">
+                    <form action="temas/{{ $tema->id}}" method="post">
                         @csrf
                         @method('delete')
-                        <a href=""><img src="./assets/img/trash.png" alt=""></a>
+                        <button type="submit"><img src="./assets/img/trash.png" alt=""></button>
                     </form>
                 </div>
                 opções

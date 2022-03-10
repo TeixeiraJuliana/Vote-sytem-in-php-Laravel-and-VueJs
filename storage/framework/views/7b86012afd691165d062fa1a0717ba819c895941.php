@@ -26,7 +26,7 @@
                     <form action="temas/<?php echo e($tema->id); ?>" method="post">
                         <?php echo csrf_field(); ?>
                         <?php echo method_field('delete'); ?>
-                        <a href=""><img src="./assets/img/trash.png" alt=""></a>
+                        <button type="submit"><img src="./assets/img/trash.png" alt=""></button>
                     </form>
                 </div>
                 opções

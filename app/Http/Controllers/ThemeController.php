@@ -24,8 +24,8 @@ class ThemeController extends Controller
         return view('theme.formTheme', ['addTheme' =>  $theme]);
     }
 
-    public function destruir($id ){
-        Theme::findOrFail($id)->delete(); 
+    public function destruir( $id ){
+        Theme::findOrFail($id)->delete();
     }
 
 
