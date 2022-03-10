@@ -21,3 +21,7 @@ Route::get('/temas/excluir',  [App\Http\Controllers\ThemeController::class, 'del
 */
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
