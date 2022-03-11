@@ -12,7 +12,7 @@
             </div>
             <div id="m-home-op" >
                 <h1>Pesquisas mais acessadas</h1>
-                <a href="{{ url('/theme/teste')}}">Home</a>
+                <a href="{{ url('teste')}}">Home</a>
             </div>
         </div>
     </div>

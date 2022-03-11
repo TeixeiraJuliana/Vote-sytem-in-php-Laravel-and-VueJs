@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
     <title>Signo - Sistema de votação</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="<?php echo e(mix('js/app.js')); ?>" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -29,53 +29,56 @@
         <div>
             <nav>
                 <div class="container-navbar">
-                    @guest
                     <div>
                         <li>Logo</li>
                     </div>
+                    <?php if(auth()->guard()->guest()): ?>
                     <ul class="m-flx-g m-reg-log">
-                        @if (Route::has('login'))
+                        <?php if(Route::has('login')): ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="<?php echo e(route('login')); ?>"><?php echo e(__('Login')); ?></a>
                             </li>
-                        @endif
-                        @if (Route::has('register'))
+                        <?php endif; ?>
+                        <?php if(Route::has('register')): ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" href="<?php echo e(route('register')); ?>"><?php echo e(__('Register')); ?></a>
                             </li>
                     </ul>
                 </div>
-                    @endif
-                    @else
+                    <?php endif; ?>
+                    <?php else: ?>
                 <div class="container-navbar">
                     <div class="m-my-itens-nav m-flx-g">
-                        <a href="{{ url('/home')}}">Home</a>
-                        <a href="{{ url('/temas/novoTema')}}">Novo tema</a>
-                        <a href="{{ url('temas')}}">Dashboard</a>
+                        <a href="<?php echo e(url('/home')); ?>">Home</a>
+                        <a href="<?php echo e(url('/temas/novoTema')); ?>">Novo tema</a>
+                        <a href="<?php echo e(url('temas')); ?>">Dashboard</a>
                     </div>
                     <div >
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
+                            <?php echo e(Auth::user()->name); ?>
+
                         </a>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
                                 onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                <?php echo e(__('Logout')); ?>
+
                             </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
+                            <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
+                                <?php echo csrf_field(); ?>
                             </form>
                         </div>
                     </div>
                 </div>
-                    @endguest
+                    <?php endif; ?>
             </nav>
             <div>
-                    @yield('content' )
+                    <?php echo $__env->yieldContent('content' ); ?>
             </div>
         </div>
     </div>
-    <script src="{{mix('js/app.js')}}"></script>
+    <script src="<?php echo e(mix('js/app.js')); ?>"></script>
 </body>
 </html>
+<?php /**PATH /home/usuario/Documentos/Vote-sytem-in-php-Laravel-and-VueJs/resources/views////layouts/app.blade.php ENDPATH**/ ?>

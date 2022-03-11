@@ -19,7 +19,6 @@ return new class extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('description');
-            $table->string('slug');
             $table->softDeletes();
             $table->timestamps();
         });

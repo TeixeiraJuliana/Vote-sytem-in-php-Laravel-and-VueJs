@@ -10,7 +10,7 @@
     <title>Signo - Sistema de votação</title>
 
     <!-- Scripts -->
-    <script src="<?php echo e(mix('js/app.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('js/app.js')); ?>" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -29,10 +29,10 @@
         <div>
             <nav>
                 <div class="container-navbar">
+                    <?php if(auth()->guard()->guest()): ?>
                     <div>
                         <li>Logo</li>
                     </div>
-                    <?php if(auth()->guard()->guest()): ?>
                     <ul class="m-flx-g m-reg-log">
                         <?php if(Route::has('login')): ?>
                             <li class="nav-item">
