@@ -26,61 +26,57 @@
 </head>
 <body>
     <div id="app">
-    <main class="py-4">
         <div>
             <nav>
                 <div class="container-navbar">
-                                <div>
-                                    <li>Logo</li>
-                                </div>
-                                @guest
-                                <ul class="m-flx-g m-reg-log">
-                                    @if (Route::has('login'))
+                    <div>
+                        <li>Logo</li>
+                    </div>
+                    @guest
+                    <ul class="m-flx-g m-reg-log">
+                        @if (Route::has('login'))
 
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                        </li>
-                                    @endif
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                        @endif
 
-                                    @if (Route::has('register'))
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                        </li>
-                                    </div>
-                                    @endif
-                                </ul>
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        </div>
+                        @endif
+                    </ul>
 
-                                @else
-                                <div class="container-navbar">
-                                    <div class="m-my-itens-nav m-flx-g">
-                                        <a href="{{ url('/home')}}">Home</a>
-                                        <a href="{{ url('/temas/novoTema')}}">Novo tema</a>
-                                        <a href="{{ url('temas')}}">Dashboard</a>
-                                    </div>
-                                    <div >
-                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                            {{ Auth::user()->name }}
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                               onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
-                                            </a>
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                @csrf
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endguest
-
-
-
+                    @else
+                    <div class="container-navbar">
+                        <div class="m-my-itens-nav m-flx-g">
+                            <a href="{{ url('/home')}}">Home</a>
+                            <a href="{{ url('/temas/novoTema')}}">Novo tema</a>
+                            <a href="{{ url('temas')}}">Dashboard</a>
+                        </div>
+                        <div >
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    @endguest
             </nav>
-        <div>
-                @yield('content' )
-        </div>
+            <div>
+                    @yield('content' )
+            </div>
         </div>
     </div>
     <script src="{{mix('js/app.js')}}"></script>
