@@ -72,15 +72,15 @@ unset($__errorArgs, $__bag); ?>
                             </div>
                         </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                        <div >
+                            <div class="m-forgot-p m-flx-g">
                                 <button type="submit" class="btn btn-primary">
                                     <?php echo e(__('Login')); ?>
 
                                 </button>
 
                                 <?php if(Route::has('password.request')): ?>
-                                    <a class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
+                                    <a class="" href="<?php echo e(route('password.request')); ?>">
                                         <?php echo e(__('Forgot Your Password?')); ?>
 
                                     </a>

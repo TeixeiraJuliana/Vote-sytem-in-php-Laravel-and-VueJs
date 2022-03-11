@@ -56,6 +56,10 @@ input{
     background-color: var(--color-bolhas-escuras);
     color: var(--color-bolhas-medias);
 }
+.m-forgot-p a{
+    color: var(--color-cinza-fonte);
+
+}
 
 
 
