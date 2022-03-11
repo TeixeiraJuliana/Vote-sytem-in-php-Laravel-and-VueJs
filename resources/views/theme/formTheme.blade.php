@@ -16,9 +16,9 @@
                 </div>
                 <div class="m-item-form">
                     <label for="title">Descrição</label>
-                    <input type="textarea" name="description" value="$theme->description">
+                    <textarea type="textarea" name="description" value="$theme->description"  id="" cols="30" rows="10"></textarea>
                 </div>
-                <button type="submit">Cadastrar</button>
+                <button class="btn btn-form" type="submit">Cadastrar</button>
             </form>
         </div>
     </div>
@@ -34,14 +34,15 @@
                 </div>
                 <div>
                     <label for="title">Descrição</label>
-                    <input id="m-inp-desc" type="textearea" name="description">
+                    <textarea  id="m-inp-desc" type="textearea" name="description"  id="" cols="30" rows="10"></textarea>
                 </div>
                 <div>
                     <label for="title">Opções</label>
                     <input type="text" name="">
                 </div>
-                <button class="btn btn-form" type="submit">Cadastrar</button>
+                <button class="btn btn-form" type="submit">Alterar</button>
             </form>
+            <App><App>
         </div>
     </div>
 @endif

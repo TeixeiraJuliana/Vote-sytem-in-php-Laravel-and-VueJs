@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="./assets/style/module/general.css">
     <link rel="stylesheet" href="./assets/style/theme/general-themes.css">
     <link rel="stylesheet" href="./assets/style/leyout/text.css">
+    <link rel="stylesheet" href="./assets/style/responsiveness/responsive.css">
+    
 
 </head>
 <body>

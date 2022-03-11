@@ -129,9 +129,9 @@ body{
     border: none;
 }
 
-#m-theme-table{
-    width: 100%;
-    height: 100%;
+#m-theme-table,
+#m-content-rows
+{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -180,7 +180,8 @@ body{
     justify-content: space-around;
 }
 #m-icons-up-del img{
-    max-width: 25px;
+    width: 100%;
+    width: 25px;
 }
 button{
     background: transparent;
@@ -202,14 +203,13 @@ button{
 .m-cont-form-theme form{
     width: 800px;
 }
-.m-cont-form-theme input{
+.m-cont-form-theme input, textarea{
     width: 100%;
     height: 100%;
     min-height: 60px;
     margin: 10px 0px 10px 0px;
     padding: 15px;
 }
-
 #m-inp-desc{
     height: 100%;
     min-height: 200px;
