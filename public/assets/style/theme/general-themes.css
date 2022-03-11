@@ -45,6 +45,14 @@ input{
     background: var(--color-bolhas-escuras);
     color: var(--color-bolhas-medias);
 }
+.container-navbar a{
+    color: var(--color-bolhas-medias);
+}
+.container-navbar a:hover{
+    font-weight: bold;
+    color: var(--color-detalhe-logo);
+}
+
 
 
 

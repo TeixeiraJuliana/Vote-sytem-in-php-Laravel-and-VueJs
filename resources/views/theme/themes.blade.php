@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div id="m-theme-table">
-            <h1>Temas de cadastrados para votação</h1>
+            <h1>Concursos em andamento</h1>
             <div>
                 <div id="m-table-theme-heading">
                     <div>Titulo</div>
