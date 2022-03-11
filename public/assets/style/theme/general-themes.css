@@ -17,7 +17,7 @@ h1{
     color: var(--color-detalhe-logo);
 }
 label{
-    color: var(--color-bolhas-medias);
+    color: var(--color-bolhas-escuras);
 }
 input{
     border: 1px solid var(--color-bolhas-medias);
@@ -51,6 +51,10 @@ input{
 .container-navbar a:hover{
     font-weight: bold;
     color: var(--color-detalhe-logo);
+}
+.btn{
+    background-color: var(--color-bolhas-escuras);
+    color: var(--color-bolhas-medias);
 }
 
 

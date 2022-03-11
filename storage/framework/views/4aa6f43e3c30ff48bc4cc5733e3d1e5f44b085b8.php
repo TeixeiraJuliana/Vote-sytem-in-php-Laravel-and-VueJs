@@ -1,14 +1,45 @@
 <?php $__env->startSection('content'); ?>
-        <div class="container m-flx-g ">
-            <div class="card">
-                <h1 class="card-header"><?php echo e(__('Login')); ?></h1>
-                <div class="card-body">
-                    <form method="POST" action="<?php echo e(route('login')); ?>">
+<div class="container m-flx-g">
+    <div>
+        <div>
+            <div class="card m-flx-g">
+                <h1><?php echo e(__('Register')); ?></h1>
+
+                <div class="card-body m-flx-g">
+                    <form method="POST" action="<?php echo e(route('register')); ?>">
                         <?php echo csrf_field(); ?>
-                        <div class="row mb-3">
+                        <div class="m-log-em-pas">
+                            <label for="name" class="col-md-4 col-form-label text-md-end"><?php echo e(__('Name')); ?></label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control <?php $__errorArgs = ['name'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" name="name" value="<?php echo e(old('name')); ?>" required autocomplete="name" autofocus>
+
+                                <?php $__errorArgs = ['name'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong><?php echo e($message); ?></strong>
+                                    </span>
+                                <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+                            </div>
+                        </div>
+
+                        <div class="m-log-em-pas">
                             <label for="email" class="col-md-4 col-form-label text-md-end"><?php echo e(__('Email Address')); ?></label>
 
-                            <div class="m-log-em-pas">
+                            <div class="col-md-6">
                                 <input id="email" type="email" class="form-control <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -16,7 +47,8 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="email" value="<?php echo e(old('email')); ?>" required autocomplete="email" autofocus>
+unset($__errorArgs, $__bag); ?>" name="email" value="<?php echo e(old('email')); ?>" required autocomplete="email">
+
                                 <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -31,6 +63,7 @@ endif;
 unset($__errorArgs, $__bag); ?>
                             </div>
                         </div>
+
                         <div class="m-log-em-pas">
                             <label for="password" class="col-md-4 col-form-label text-md-end"><?php echo e(__('Password')); ?></label>
 
@@ -42,7 +75,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="password" required autocomplete="current-password">
+unset($__errorArgs, $__bag); ?>" name="password" required autocomplete="new-password">
 
                                 <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -59,38 +92,28 @@ unset($__errorArgs, $__bag); ?>
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" <?php echo e(old('remember') ? 'checked' : ''); ?>>
+                        <div class="m-log-em-pas">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end"><?php echo e(__('Confirm Password')); ?></label>
 
-                                    <label class="form-check-label" for="remember">
-                                        <?php echo e(__('Remember Me')); ?>
-
-                                    </label>
-                                </div>
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    <?php echo e(__('Login')); ?>
+                        <div class="m-log-em-pas">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn">
+                                    <?php echo e(__('Register')); ?>
 
                                 </button>
-
-                                <?php if(Route::has('password.request')): ?>
-                                    <a class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
-                                        <?php echo e(__('Forgot Your Password?')); ?>
-
-                                    </a>
-                                <?php endif; ?>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/usuario/Documentos/Vote-sytem-in-php-Laravel-and-VueJs/resources/views/auth/login.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/usuario/Documentos/Vote-sytem-in-php-Laravel-and-VueJs/resources/views/auth/register.blade.php ENDPATH**/ ?>
