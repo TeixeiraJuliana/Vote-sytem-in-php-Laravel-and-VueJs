@@ -52,7 +52,7 @@
                                     <div class="m-my-itens-nav m-flx-g">
                                         <a href="{{ url('/home')}}">Home</a>
                                         <a href="{{ url('/temas/novoTema')}}">Novo tema</a>
-                                        <a href="{{ url('temas')}}">Temas</a>
+                                        <a href="{{ url('temas')}}">Dashboard</a>
                                     </div>
                                     <div >
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

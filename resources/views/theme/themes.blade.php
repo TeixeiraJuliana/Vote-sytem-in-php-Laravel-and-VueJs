@@ -22,13 +22,18 @@
                     <div>{{$tema->created_at}}</div>
                     <div id="m-icons-up-del">
 
-                        <a href="temas/edit/{{ $tema->id}}"><img src="./assets/img/update.png" alt=""></a>
+                        <div>
+                            <a href="temas/edit/{{ $tema->id}}"><img src="./assets/img/update.png" alt=""></a>
+                        </div>
                         <div>
                             <form action="temas/{{ $tema->id}}" method="post">
                                 @csrf
                                 @method('delete')
                                 <button type="submit"><img src="./assets/img/trash.png" alt=""></button>
                             </form>
+                        </div>
+                        <div>
+                            <a href="temas/edit/{{ $tema->id}}"><img src="./assets/img/options.png" alt=""></a>
                         </div>
                     </div>
                 </div>

@@ -23,7 +23,6 @@ class ThemeController extends Controller
         $theme = Theme::findOrFail($id);
         return view('theme.formTheme', ['theme' => $theme]);
     }
-
     public function update($id, Request $request){
         $theme = Theme::findOrFail($id);
         $theme->update($request->all());

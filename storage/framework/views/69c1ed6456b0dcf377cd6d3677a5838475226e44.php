@@ -52,7 +52,7 @@
                                     <div class="m-my-itens-nav m-flx-g">
                                         <a href="<?php echo e(url('/home')); ?>">Home</a>
                                         <a href="<?php echo e(url('/temas/novoTema')); ?>">Novo tema</a>
-                                        <a href="<?php echo e(url('temas')); ?>">Temas</a>
+                                        <a href="<?php echo e(url('temas')); ?>">Dashboard</a>
                                     </div>
                                     <div >
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -73,9 +73,6 @@
                                     </div>
                                 </div>
                                 <?php endif; ?>
-
-
-
             </nav>
         <div>
                 <?php echo $__env->yieldContent('content' ); ?>
