@@ -25,29 +25,11 @@
 
 </head>
 <body>
-    <div id="app">  
-    <main class="py-4">   
+    <div id="app">
+    <main class="py-4">
         <div>
             <nav>
                 <div class="container-navbar m-flx-g">
-                    <div>
-                        <div class="m-l-nav">
-                            <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
-
-                            </a>
-                        </div>
-                        <div class="m-m-nav-"> <!--MEIO -->
-                            <div class="m-navbar-midle collapse navbar-collapse" id="navbarSupportedContent">
-                                <!--Left Side Of Navbar -->
-                                <ul class="navbar-nav me-auto">
-                                    <ul class="navbar-nav me-auto">
-                                        <Navbar></Navbar>
-                                        
-                                    </ul>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                     <div class="m-r-nav"> <!--FIM-->
                         <!-- Right Side Of Navbar -->
                         <div>
@@ -90,9 +72,14 @@
                     </div>
                 </div>
             </nav>
-            
+        <div>
+
+            <div >
+                <a href="<?php echo e(url('/temas/novoTema')); ?>">Criar Tema</a>
+                <a href="<?php echo e(url('temas')); ?>">Temas de votações</a>
+            </div>
                 <?php echo $__env->yieldContent('content' ); ?>
-            </main>
+        </div>
         </div>
     </div>
     <script src="<?php echo e(mix('js/app.js')); ?>"></script>

@@ -25,29 +25,11 @@
 
 </head>
 <body>
-    <div id="app">  
-    <main class="py-4">   
+    <div id="app">
+    <main class="py-4">
         <div>
             <nav>
                 <div class="container-navbar m-flx-g">
-                    <div>
-                        <div class="m-l-nav">
-                            <a class="navbar-brand" href="{{ url('/') }}">
-
-                            </a>
-                        </div>
-                        <div class="m-m-nav-"> <!--MEIO -->
-                            <div class="m-navbar-midle collapse navbar-collapse" id="navbarSupportedContent">
-                                <!--Left Side Of Navbar -->
-                                <ul class="navbar-nav me-auto">
-                                    <ul class="navbar-nav me-auto">
-                                        <Navbar></Navbar>
-                                        
-                                    </ul>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                     <div class="m-r-nav"> <!--FIM-->
                         <!-- Right Side Of Navbar -->
                         <div>
@@ -88,9 +70,14 @@
                     </div>
                 </div>
             </nav>
-            
+        <div>
+
+            <div >
+                <a href="{{ url('/temas/novoTema')}}">Criar Tema</a>
+                <a href="{{ url('temas')}}">Temas de votações</a>
+            </div>
                 @yield('content' )
-            </main>
+        </div>
         </div>
     </div>
     <script src="{{mix('js/app.js')}}"></script>

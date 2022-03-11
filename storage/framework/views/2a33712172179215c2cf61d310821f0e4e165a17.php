@@ -1,8 +1,5 @@
-
-
 <?php $__env->startSection('content'); ?>
 <div class="container">
-
 <div>
     <div class="m-dash-cont  m-flx-g">
         <div id="m-home-left">
@@ -19,8 +16,8 @@
             </div>
         </div>
     </div>
+    <link rel="stylesheet" href="../assets/style/module/general.css">
 </div>
-    <Footer></Footer>
 </div>
 <?php $__env->stopSection(); ?>
 
