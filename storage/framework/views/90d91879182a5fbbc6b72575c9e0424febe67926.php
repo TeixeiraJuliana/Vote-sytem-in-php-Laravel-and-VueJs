@@ -3,8 +3,7 @@
     <link rel="stylesheet" href="../assets/style/module/general.css">
     <link rel="stylesheet" href="../assets/style/theme/general-themes.css">
     <link rel="stylesheet" href="../assets/style/leyout/text.css">
-    <?php $__env->startSection('content'); ?>
-    <?php $__env->stopSection(); ?>
+
 <?php if( Request::is('*/edit')): ?>
     <div class="container m-flx-g ">
         <div class="m-cont-form-theme m-flx-g" >
